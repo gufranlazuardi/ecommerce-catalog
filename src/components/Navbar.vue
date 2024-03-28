@@ -10,7 +10,9 @@ export default {
 
 <template>
   <div class="flex justify-between">
-    <p class="text-2xl font-semibold">Vogue</p>
+    <router-link to="/">
+      <p class="text-2xl font-semibold">Vogue</p>
+    </router-link>
     <Button>Login</Button>
   </div>
 </template>
