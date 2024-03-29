@@ -4,6 +4,7 @@ export const getAllProducts = async () => {
   try {
     const response = await axiosWithConfig.get("/products");
     return response.data;
+    console.log("response :", response);
   } catch (error: any) {
     throw Error(error.response.data.message);
   }
