@@ -1,16 +1,14 @@
 <script setup>
 import { onMounted, ref } from "vue";
-import { useRouter } from "vue-router";
-import axiosWithConfig from "../utils/axiosWithConfig";
+import axios from "axios";
+import { useRoute } from "vue-router";
 
-const router = useRouter();
-const data = ref(null);
-
+const product = ref(null);
+const route = useRoute();
 const fetchDetail = async () => {
   try {
-    const productId = router.currentRoute.value.params.id; // Mendapatkan ID dari URL
-    const response = await axiosWithConfig.get(`/products/${productId}`); // Menggunakan ID dalam URL API
-    data.value = response.data;
+    const response = await axios.get(`https://fakestoreapi.com/products/${route.params.id}`);
+    product.value = response.data;
   } catch (error) {
     console.error("Error:", error);
   }
@@ -23,8 +21,8 @@ onMounted(() => {
 
 <template>
   <div class="w-full h-screen">
-    <div class="h-3/4 bg-[#FDE2FF]">
-      <CardProductDetail :product="data" />
+    <div class="h-3/4 bg-[#FDE2FF]" v-if="product">
+      <CardProductDetail :detail="product" key="product.id" />
     </div>
   </div>
 </template>
