@@ -3,6 +3,8 @@ import Home from "@/pages/Home.vue";
 import DetailProduct from "@/pages/DetailProduct.vue";
 import AllProducts from "@/pages/AllProducts.vue";
 import Layout from "@/components/Layout.vue";
+import Login from "@/pages/Login.vue";
+import Register from "@/pages/Register.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,6 +32,16 @@ const router = createRouter({
       meta: {
         layout: Layout,
       },
+    },
+    {
+      path: "/login",
+      name: "Login",
+      component: Login,
+    },
+    {
+      path: "/register",
+      name: "Register",
+      component: Register,
     },
   ],
 });
