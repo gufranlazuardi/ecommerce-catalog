@@ -2,12 +2,6 @@
 import Separator from "../components/ui/separator/Separator.vue";
 import { defineProps } from "vue";
 
-export default {
-  components: {
-    Separator,
-  },
-};
-
 const props = defineProps({
   detail: Object,
 });
