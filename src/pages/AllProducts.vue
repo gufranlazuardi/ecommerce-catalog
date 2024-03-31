@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import Layout from "../components/Layout.vue";
-import CardAllProducts from "../components/CardAllProducts.vue";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Search } from "lucide-vue-next";
-import { Input } from "@/components/ui/input";
-// import SkeletonAllProducts from "../components/SkeletonAllProducts.vue";
-import { Skeleton } from "@/components/ui/skeleton";
 import SkeletonAllProducts from "../components/SkeletonAllProducts.vue";
+import CardAllProducts from "../components/CardAllProducts.vue";
+import Layout from "../components/Layout.vue";
+import { Input } from "@/components/ui/input";
+import { Search } from "lucide-vue-next";
 import { onMounted, ref } from "vue";
 import axios from "axios";
 
@@ -66,7 +64,7 @@ onMounted(() => {
       class="grid grid-cols-2 gap-2 mt-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
       v-if="products"
     >
-      <CardAllProducts v-for="product in products" :key="product.id" :product="product" />
+      <CardAllProducts v-for="product in products" :key="product" :product="product" />
     </div>
   </Layout>
 </template>

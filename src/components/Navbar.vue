@@ -1,12 +1,6 @@
 <script setup lang="ts">
-import { Button } from "./ui/button";
-import { Search } from "lucide-vue-next";
-import { Input } from "@/components/ui/input";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { ref } from "vue";
-
-const searchTerm = ref("");
+import { Button } from "./ui/button";
 </script>
 
 <template>
