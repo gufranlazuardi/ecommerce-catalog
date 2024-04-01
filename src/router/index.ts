@@ -5,13 +5,14 @@ import AllProducts from "@/pages/AllProducts.vue";
 import Layout from "@/components/Layout.vue";
 import Login from "@/pages/Login.vue";
 import Register from "@/pages/Register.vue";
+import SlicingDetail from "@/pages/slicingDetail.vue";
+import UnavailableProducts from "@/pages/UnavailableProducts.vue";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",
-      name: "Home",
       component: Home,
       meta: {
         layout: Layout,
@@ -19,15 +20,10 @@ const router = createRouter({
     },
     {
       path: "/products/:id",
-      name: "DetailProduct",
       component: DetailProduct,
-      meta: {
-        layout: Layout,
-      },
     },
     {
       path: "/products",
-      name: "AllProduct",
       component: AllProducts,
       meta: {
         layout: Layout,
@@ -35,12 +31,10 @@ const router = createRouter({
     },
     {
       path: "/login",
-      name: "Login",
       component: Login,
     },
     {
       path: "/register",
-      name: "Register",
       component: Register,
     },
   ],
