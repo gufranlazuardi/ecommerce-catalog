@@ -1,10 +1,10 @@
 <script setup>
 import Separator from "@/components/ui/separator/Separator.vue";
+import SkeletonDetail from "../components/SkeletonDetail.vue";
 import sadface from "../assets/sad-face.png";
 import { useRoute } from "vue-router";
 import { onMounted, ref } from "vue";
 import axios from "axios";
-import SkeletonDetail from "../components/SkeletonDetail.vue";
 
 const product = ref({});
 const loading = ref(true);

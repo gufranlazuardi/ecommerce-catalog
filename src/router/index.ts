@@ -5,8 +5,6 @@ import AllProducts from "@/pages/AllProducts.vue";
 import Layout from "@/components/Layout.vue";
 import Login from "@/pages/Login.vue";
 import Register from "@/pages/Register.vue";
-import SlicingDetail from "@/pages/slicingDetail.vue";
-import UnavailableProducts from "@/pages/UnavailableProducts.vue";
 
 const router = createRouter({
   history: createWebHistory(),
