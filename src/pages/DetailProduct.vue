@@ -31,7 +31,7 @@ onMounted(() => {
     <SkeletonDetail v-if="loading" />
   </div>
 
-  <div class="flex flex-col justify-center items-center h-screen" v-if="product.id && !loading">
+  <div class="flex flex-col justify-center items-center h-screen relative" v-if="product.id && !loading">
     <!-- background warna -->
     <div
       v-bind:style="{
@@ -48,7 +48,11 @@ onMounted(() => {
     <div
       class="sm:flex sm:flex-col md:flex md:flex-row lg:flex lg:flex-row xl:flex xl:flex-row w-5/6 h-fit border px-12 py-8 gap-10 rounded-lg shadow-lg z-10 bg-white"
     >
-      <img :src="product.image" alt="dress" class="max-w-[20rem] max-h-[30rem]" />
+      <img
+        :src="product.image"
+        alt="{{ product.title }}"
+        class="xl:max-w-[20rem] xl:max-h-[30rem] sm:max-w-[15rem] sm:max-h-[25rem] md:max-w-[15rem] md:max-h-[25rem] lg:max-w-[15rem] lg:max-h-[25rem]"
+      />
       <div class="flex flex-col gap-2">
         <h1 class="text-[28px] font-semibold text-[#720060]">{{ product.title }}</h1>
         <div class="flex justify-between mt-2">
